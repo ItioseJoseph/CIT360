@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration 
+DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate.configuration-3.0.dtd">
+<hibernate-configuration>
+        <session-factory>
+<!-- Related to the connection START -->
+<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+<property name="connection.url">jdbc:mysql://localhost:3306/?user=root</property>
+<property name="connection.user">root</property>
+<property name="connection.password">Believe8736Fabulous</property>
+<!-- Related to the connection END -->
+
+<!-- JDBC Connection pool setting.... using the built-in test pool -->
+<property name="connection.pool_size">1</property>
+
+<!-- Enable hibernate's automatic session contest management -->
+<property name="current_session_contest_class">thread</property>
+
+<!-- Enable the second level cache -->
+<property name="cache.provider_class">org.hibernate.cache.internal.Nochacheprovider</property>
+
+<!-- Related to hibernate properties START -->
+<property name="show_sql">true</property>
+<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+<property name="hbm2ddl.auto">update</property>
+<!-- Related to hibernate properties END -->
+
+<!-- Mapping to classes -->
+<mapping class="edu.ItioseJoseph.test.Area" />
+<!-- Related mapping to classes END -->
+
+</session-factory>
+</hibernate-configuration>
